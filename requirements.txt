@@ -1,0 +1,9 @@
+causal-conv1d==1.0.0
+mamba-ssm==1.0.1
+scikit-image==0.19.2
+numpy==1.24.4
+opencv-python==4.11.0.86
+timm==0.6.13
+tqdm==4.67.1
+tensorboard==2.19.0
+transformers==4.25.1

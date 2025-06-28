@@ -1,0 +1,15 @@
+services:
+  smooth-video:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./mount_data:/workspace/mount_data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia
+    stdin_open: true
+    tty: true
