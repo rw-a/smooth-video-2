@@ -20,7 +20,7 @@
 ## Installation
 1. Clone the repository
 ```bash
-git clone [https://github.com/rw-a/smooth-video](https://github.com/rw-a/smooth-video-2.git)
+git clone https://github.com/rw-a/smooth-video-2.git
 cd smooth-video-2
 ```
 2. Build and deploy the provided Docker image
