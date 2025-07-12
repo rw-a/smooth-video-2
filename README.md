@@ -42,7 +42,7 @@ python interpolate_video.py --model VFIMamba_S --n 2 --scale 0.5 mount_data/inpu
 
 > `n`=2 means we double the framerate of the video. `n`=4 means we have 4 times the number of frames in total.
 
-> The `scale` parameter improves performance at higher resolutions. We downsample the images by the scale to predict the optical flow, then resize to the original size to perform the other operations.
+> The `scale` parameter improves inference speed. We downsample the images by the scale to predict the optical flow, then resize to the original size to perform the other operations.
 > We recommend setting the scale to 0.5 for 2K frames and 0.25 for 4K frames.
 
 ## Credit
