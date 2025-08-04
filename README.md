@@ -38,12 +38,11 @@ docker compose exec smooth-video bash
 python interpolate_video.py --model VFIMamba_S --n 2 --scale 0.5 mount_data/input.mp4 mount_data/output.mp4
 ```
 
-> The model can be either `VFIMamba` or `VFIMamba_S`. `VFIMamba_S` is much faster but less accurate.
+The model can be either `VFIMamba` or `VFIMamba_S`. `VFIMamba_S` is much faster but less accurate.
 
-> `n`=2 means we double the framerate of the video. `n`=4 means we have 4 times the number of frames in total.
+`n`=2 means we double the framerate of the video. `n`=4 means we have 4 times the number of frames in total.
 
-> The `scale` parameter improves inference speed. We downsample the images by the scale to predict the optical flow, then resize to the original size to perform the other operations.
-> We recommend setting the scale to 0.5 for 2K frames and 0.25 for 4K frames.
+The `scale` parameter improves inference speed. We downsample the images by the scale to predict the optical flow, then resize to the original size to perform the other operations. We recommend setting the scale to 0.5 for 2K frames and 0.25 for 4K frames.
 
 ## Credit
 
