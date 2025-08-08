@@ -1,6 +1,8 @@
 services:
   smooth-video:
-    image: ghcr.io/rw-a/smooth-video-2:main
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./mount_data:/workspace/mount_data
     deploy:

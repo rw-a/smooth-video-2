@@ -23,9 +23,9 @@
 git clone https://github.com/rw-a/smooth-video-2.git
 cd smooth-video-2
 ```
-2. Build and deploy the provided Docker image
+2. Deploy the provided Docker image locally
 ```bash
-docker compose up --build
+docker compose up
 ```
 3. Copy your video file into `mount_data`
 ```bash
@@ -43,6 +43,12 @@ The model can be either `VFIMamba` or `VFIMamba_S`. `VFIMamba_S` is much faster 
 `n`=2 means we double the framerate of the video. `n`=4 means we have 4 times the number of frames in total.
 
 The `scale` parameter improves inference speed. We downsample the images by the scale to predict the optical flow, then resize to the original size to perform the other operations. We recommend setting the scale to 0.5 for 2K frames and 0.25 for 4K frames.
+
+## Development
+If you would like to build the image locally too (instead of pulling it), run
+```bash
+docker compose -f docker-compose-build.yml up --build
+```
 
 ## Credit
 
